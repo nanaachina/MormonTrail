@@ -100,7 +100,13 @@ public class GameMenuView extends View {
                 this.displayHelpMenu();
                 break;
             case 'Q':
-                GeneralStoreView storeView = new GeneralStoreView();
+                GeneralStoreView storeView = new GeneralStoreView() {
+
+            @Override
+            public boolean doAction(String value) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
                 storeView.display();
                 return true;
             case 'M':

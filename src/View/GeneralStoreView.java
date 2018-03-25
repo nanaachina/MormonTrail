@@ -7,7 +7,9 @@ package View;
 
 import Control.GameControl;
 import Control.InventoryControl;
+import Exceptions.InventoryControlException;
 import Model.InventoryItem;
+import Model.ItemType;
 import Model.Occupation;
 import java.text.DecimalFormat;
 
