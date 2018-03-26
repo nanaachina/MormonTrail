@@ -33,7 +33,7 @@ public class FoodControlTest {
         int noDaysTravelled = 2;
         int rationType = 3;
         int initialFood = 1000;
-        //FoodControl instance = new FoodControl();
+        FoodControl instance = new FoodControl();
         int expResult = 988;
         //int result = FoodControl.calcRemainingFood(noOfPeople, noDaysTravelled, rationType, initialFood);
 //        assertEquals(expResult, result, 0.0001);
