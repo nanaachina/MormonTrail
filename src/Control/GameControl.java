@@ -409,9 +409,8 @@ public class GameControl implements Serializable{
     
     public static InventoryItem[] getSortedInventoryListInStock() {
 
-        // get inventory list for the current game
-        InventoryItem[] originalInventoryList
-                = MormonTrail.getCurrentGame().getInventory();
+        InventoryItem[] originalInventoryList;
+        originalInventoryList = MormonTrail.getCurrentGame().getInventory();
 
         // make a copy of orignalList
         InventoryItem[] inventoryList = originalInventoryList.clone();
