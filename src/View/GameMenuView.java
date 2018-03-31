@@ -72,19 +72,16 @@ public class GameMenuView extends View {
             case '4': // continue on the trail menu
                 this.TrailMenu();
                 break;
-            /**case '5': // River crossing menu
-                this.riverCrossing();
-                break; **/
-            case '6': // hunt menu
+            case '5': // hunt menu
                 this.hunt();
                 break;
-            case '7': // change pace
+            case '6': // change pace
                 this.paceChange();
                 break;
-            case '8': // change rations
+            case '7': // change rations
                 this.rationChange();
                 break;
-            case '9': // change rations
+            case '8': // change rations
                 this.TakeARest();
                 break;
             case 'T': // attempt to trade
@@ -113,7 +110,7 @@ public class GameMenuView extends View {
                 MainMenuView mainMenu = new MainMenuView();
                 mainMenu.display();
             default:
-               // ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         }
         return false;
     }
@@ -133,12 +130,7 @@ public class GameMenuView extends View {
         this.console.println("\n***travelTheTrail function stub called***");
         this.console.println("\n***We are almost completed this function***");
     }
-/**
-    private void riverCrossing() {
-        RiverCrossingMenuView river = new RiverCrossingMenuView();
-        river.display();
-    }
-**/
+
     private void hunt() {
         HuntMenuView hunt = new HuntMenuView();
         hunt.display();
@@ -261,7 +253,7 @@ public class GameMenuView extends View {
             bw.println("\n=================================================");
 
         } catch (IOException e) {
-          //  ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+            ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
         } finally {
 
             try {
@@ -275,7 +267,7 @@ public class GameMenuView extends View {
                 }
 
             } catch (IOException ex) {
-             //   ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+                ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
                 ex.printStackTrace();
 
             }
