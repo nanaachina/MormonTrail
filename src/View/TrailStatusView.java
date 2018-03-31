@@ -58,7 +58,7 @@ public class TrailStatusView extends View {
                 done = this.doAction(value);
             } while (!done);
         } catch (NumberFormatException nfe) {
-            ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+       //     ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         }
     }
 
@@ -92,7 +92,7 @@ public class TrailStatusView extends View {
                 
                 break;                  
             default:
-                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+            //    ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
                 break;
         }
         return false;

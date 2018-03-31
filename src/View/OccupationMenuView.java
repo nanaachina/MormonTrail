@@ -75,13 +75,13 @@ public class OccupationMenuView extends View { //
                     this.occupationHelpInfo();
                     break;
                 default:
-                    ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+                //    ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
                     OccupationMenuView occupation = new OccupationMenuView();
                     occupation.display();
                     break;
             }
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+       //     ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
 
         }
         return false;

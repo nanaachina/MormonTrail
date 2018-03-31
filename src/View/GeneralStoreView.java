@@ -114,7 +114,7 @@ public class GeneralStoreView extends View {
                 break;
 
             default: //Get error message
-                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+               // ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
                 break;
         }
 
@@ -137,13 +137,13 @@ public class GeneralStoreView extends View {
                 value = value.trim().toUpperCase(); // trim off leading and trailing blanks
 
                 if (value.length() < 1) { // value is blank
-                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                 //   ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop
             }
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+         //   ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
         }
         return value; // return the value entered      
     }
@@ -163,7 +163,7 @@ public class GeneralStoreView extends View {
                 value = value.trim().toUpperCase(); // trim off leading and trailing blanks
 
                 if (value.length() < 1) { // value is blank
-                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                 //   ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
 
@@ -172,7 +172,7 @@ public class GeneralStoreView extends View {
             }
 
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+        //    ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
 
         }
         return value; // return the value entered 
@@ -208,7 +208,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                         //   ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.println("\nPlease enter the " + oxenDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -227,7 +227,7 @@ public class GeneralStoreView extends View {
 
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+        //    ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Oxen.ordinal()]; // get item from array
@@ -270,7 +270,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                      //      ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.printf("\nPlease enter the " + clothDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -288,7 +288,7 @@ public class GeneralStoreView extends View {
                 done = true;
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+        //    ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Clothing.ordinal()]; // get item from array
@@ -331,7 +331,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                         //   ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.printf("\nPlease enter the " + ammoDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -349,7 +349,7 @@ public class GeneralStoreView extends View {
                 done = true;
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+          //  ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Ammunition.ordinal()]; // get item from array
@@ -393,7 +393,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                         //   ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.printf("\nPlease enter the " + foodDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -411,7 +411,7 @@ public class GeneralStoreView extends View {
                 done = true;
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+        //    ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Food.ordinal()]; // get item from array
@@ -454,7 +454,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                         //   ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.printf("\nPlease enter the " + wheelDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -472,7 +472,7 @@ public class GeneralStoreView extends View {
                 done = true;
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+          //  ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Wheel.ordinal()]; // get item from array
@@ -515,7 +515,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                          //  ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.printf("\nPlease enter the " + axleDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -533,7 +533,7 @@ public class GeneralStoreView extends View {
                 done = true;
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+        //    ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Axle.ordinal()]; // get item from array
@@ -577,7 +577,7 @@ public class GeneralStoreView extends View {
                             addQuantity = Integer.parseInt(quantity);
                             complete = true;
                         } catch (NumberFormatException nf) {
-                            ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
+                       //     ErrorView.display(this.getClass().getName(), "***You must enter a valid number***");
                             this.console.printf("\nPlease enter the " + tongueDescription + " Quantity: ");
                             complete = false;
 //                        sleep(2500);
@@ -595,7 +595,7 @@ public class GeneralStoreView extends View {
                 done = true;
             } while (!done);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "***Error reading input***");
+      //      ErrorView.display(this.getClass().getName(), "***Error reading input***");
         }
 
         InventoryItem item = mormontrail.MormonTrail.getCurrentGame().getInventory()[ItemType.Tongue.ordinal()]; // get item from array

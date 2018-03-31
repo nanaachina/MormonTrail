@@ -113,7 +113,7 @@ public class GameMenuView extends View {
                 MainMenuView mainMenu = new MainMenuView();
                 mainMenu.display();
             default:
-                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+               // ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         }
         return false;
     }
@@ -201,7 +201,7 @@ public class GameMenuView extends View {
                 value = value.trim();
 
                 if (value.length() < 1) { // value is blank
-                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                   // ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop
@@ -261,7 +261,7 @@ public class GameMenuView extends View {
             bw.println("\n=================================================");
 
         } catch (IOException e) {
-            ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+          //  ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
         } finally {
 
             try {
@@ -275,7 +275,7 @@ public class GameMenuView extends View {
                 }
 
             } catch (IOException ex) {
-                ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+             //   ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
                 ex.printStackTrace();
 
             }

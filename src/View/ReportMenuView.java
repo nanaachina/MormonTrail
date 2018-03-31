@@ -54,7 +54,7 @@ public class ReportMenuView extends View {
                 done = this.doAction(value);
             } while (!done);
         } catch (NumberFormatException nfe) {
-            ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+    //        ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         }
     }
 
@@ -79,7 +79,7 @@ public class ReportMenuView extends View {
                 this.viewInventoryInStock();
                 break;
             default:
-                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+        //        ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -100,7 +100,7 @@ public class ReportMenuView extends View {
                 value = value.trim();
 
                 if (value.length() < 1) { // value is blank
-                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
+             //       ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop
@@ -161,7 +161,7 @@ public class ReportMenuView extends View {
             bw.println("\n=================================================");
 
         } catch (IOException e) {
-            ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+        //    ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
         } finally {
 
             try {
@@ -175,7 +175,7 @@ public class ReportMenuView extends View {
                 }
 
             } catch (IOException ex) {
-                ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+            //    ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
                 ex.printStackTrace();
 
             }
@@ -229,7 +229,7 @@ public class ReportMenuView extends View {
             bw.println("\n=================================================");
 
         } catch (IOException e) {
-            ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+       //     ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
         } finally {
 
             try {
@@ -243,7 +243,7 @@ public class ReportMenuView extends View {
                 }
 
             } catch (IOException ex) {
-                ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
+           //     ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
                 ex.printStackTrace();
 
             }
