@@ -267,7 +267,6 @@ public class GameMenuView extends View {
 
             } catch (IOException ex) {
                 ErrorView.display(this.getClass().getName(), "***Error writing to file - try again***");
-                ex.printStackTrace();
 
             }
         }
