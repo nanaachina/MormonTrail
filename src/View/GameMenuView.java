@@ -37,11 +37,10 @@ public class GameMenuView extends View {
                 + "\n2 - View location                                "
                 + "\n3 - Start on the trail                           "
                 + "\n4 - Continue on the trail"
-                + "\n5 - River Crossing menu                          "
-                + "\n6 - Hunt menu                                    "
-                + "\n7 - Change pace menu                             "
-                + "\n8 - Change food rations menu                     "
-                + "\n9 - Take a rest                                  "
+                + "\n5 - Hunt menu                                    "
+                + "\n6 - Change pace menu                             "
+                + "\n7 - Change food rations menu                     "
+                + "\n8 - Take a rest                                  "
                 + "\nT - Attempt to trade menu                        "
                 + "\nP - Talk to people                               "
                 + "\nI - Inventory report menu                        "
@@ -193,7 +192,7 @@ public class GameMenuView extends View {
                 value = value.trim();
 
                 if (value.length() < 1) { // value is blank
-                   // ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop
