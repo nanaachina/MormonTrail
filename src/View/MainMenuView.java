@@ -82,7 +82,7 @@ public class MainMenuView extends View {
                 this.saveGame();
                 break;             
             default:
-         //       ErrorView.display(this.getClass().getName(), "***Invalid selection - Try again***");
+                ErrorView.display(this.getClass().getName(), "***Invalid selection - Try again***");
                 break;
         }
         return false;
@@ -115,7 +115,7 @@ public class MainMenuView extends View {
             // start a saved game
             GameControl.getSavedGame(filepath);
         } catch (Exception e) {
-     //       ErrorView.display("MainMenuView", e.getMessage());
+            ErrorView.display("MainMenuView", e.getMessage());
         }
 
         // display the game menu
@@ -143,7 +143,7 @@ public class MainMenuView extends View {
             GameControl.saveGame(MormonTrail.getCurrentGame(), filePath);
             this.console.println("\nYour file has been saved in "+filePath);
         } catch (Exception e) {
-  //          ErrorView.display("MainMenuView", e.getMessage());
+            ErrorView.display("MainMenuView", e.getMessage());
         }    
     }
 
@@ -162,7 +162,7 @@ public class MainMenuView extends View {
                 value = value.trim();
 
                 if (value.length() < 1) { // value is blank
-                //    ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop

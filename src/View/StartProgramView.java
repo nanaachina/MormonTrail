@@ -87,13 +87,13 @@ public class StartProgramView {
                 value = value.trim(); // trim off leading and trailing blanks
 
                 if (value.length() < 1) { // value is blank
-           //         ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop
             }
         } catch (Exception e) {
-       //     ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
 
         }
 
@@ -103,23 +103,23 @@ public class StartProgramView {
     private boolean doAction(String playersName) {
         try {
             if (playersName.length() < 2) {
-            //    ErrorView.display(this.getClass().getName(), "Input must be greater than"
-              //          + " one character");
+               ErrorView.display(this.getClass().getName(), "Input must be greater than"
+                        + " one character");
                 return false;
             }
         } catch (Exception e) {
-     //      ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+           ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
         }
         // call createPlayer() control function
         Player player = GameControl.createPlayer(playersName);
 
         try {
             if (player == null) { // if unsuccessful
-         //       ErrorView.display(this.getClass().getName(), "\nError creating player");
+                ErrorView.display(this.getClass().getName(), "\nError creating player");
                 return false;
             }
         } catch (Exception e) {
-      //      ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());  
+            ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());  
         }
         
         // display next view

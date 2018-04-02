@@ -83,7 +83,7 @@ public class WagonPartyView extends View{
             boolean valid = false;
             while(!valid){
                 if (actorName.length() < 1) { // value is blank
-           //         ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     return "";
                     
                 }valid = true;
@@ -153,7 +153,7 @@ public class WagonPartyView extends View{
     }
 
     public boolean doAction(String choice) {
-   //     ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+        ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         return false;
     }
 }

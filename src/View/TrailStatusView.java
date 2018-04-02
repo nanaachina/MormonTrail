@@ -58,13 +58,13 @@ public class TrailStatusView extends View {
                 done = this.doAction(value);
             } while (!done);
         } catch (NumberFormatException nfe) {
-       //     ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+            ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         }
     }
 
     @Override
     public boolean doAction(String menu) {
-        //menu = menu.toUpperCase(); // convert choice to upper case
+       // menu = menu.toUpperCase(); // convert choice to upper case
 
         switch (menu) {
             case "1":
@@ -92,7 +92,7 @@ public class TrailStatusView extends View {
                 
                 break;                  
             default:
-            //    ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
                 break;
         }
         return false;

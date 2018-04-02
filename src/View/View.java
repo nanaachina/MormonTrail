@@ -69,14 +69,14 @@ public abstract class View implements ViewInterface {
                 value = value.trim();
 
                 if (value.length() < 1) { // value is blank
-          //          ErrorView.display(this.getClass().getName(), "You must enter a value.");
+                    ErrorView.display(this.getClass().getName(), "You must enter a value.");
                     continue;
                 }
                 break; // end the loop
             }
 
         } catch (Exception ex) {
-     //       ErrorView.display(this.getClass().getName(),"Error reading input: "+ ex.getMessage());
+            ErrorView.display(this.getClass().getName(),"Error reading input: "+ ex.getMessage());
         }
 
         return value; // return the value entered

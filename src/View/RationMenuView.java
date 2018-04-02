@@ -46,7 +46,7 @@ class RationMenuView extends View {
                 done = this.doAction(value);
             } while (!done);
         } catch (NumberFormatException nfe) {
-     //       ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+            ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         }
     }
 
@@ -65,7 +65,7 @@ class RationMenuView extends View {
                 this.bareBonesRation();
                 break;      
             default:
-        //        ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
                 break;
         }
         return false;

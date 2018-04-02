@@ -33,7 +33,7 @@ public class OccupationHelpInfoView extends View {
 
     @Override
     public boolean doAction(String choice) {
-      //  ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+        ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
         return false;
     }
 }
