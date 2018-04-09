@@ -6,6 +6,7 @@
 package Control;
 
 import Exceptions.MapControlException;
+import Model.Actor;
 import Model.Game;
 import Model.InventoryItem;
 import Model.Location;
